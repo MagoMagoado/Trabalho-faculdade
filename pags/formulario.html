@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Entrega</title>
+    <!--Importação do bootstrap para dá um pouco de estilo na formatação da pag-->
+    <link rel="stylesheet" href="../fech-api/node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+    <!--Conteiner de informações que serão tratadas pela fech-api-->
+    <!--Todos os dados que for pegado aqui vai direto para a api para o return de informações de cadatro -->
+    <div class="container">
+        <h1 id="Consulta-cep">
+            Local de entrega de medicamentos
+
+        </h1>
+        <p id="ex-cep">
+            Preencha o formulario de entrega de medicamentos para que seja efetuada a sua entrega<br>
+            dentro de alguns dias os seus remedios irão chegar, por favor aguarde e não se esqueça!
+            <h4 id="fique-em-casa">#FiqueEmCasa</h4>
+        </p>
+        <form>
+            <div class="form-group">
+                <label for="cep">CEP</label>
+                <input type="text" class="form-control" maxlength="9" id="cep">
+                <small>00000-000</small>
+            </div>
+            <div class="form-group">
+                <label for="logradouro">logradouro</label>
+                <input type="text" class="form-control" id = "logradouro">
+                <small>Rua.</small>
+            </div>
+            <div class="form-group">
+                <label for="bairro">Bairro</label>
+                <input type="text" class="form-control" id ="bairro">
+                <small>Bairro</small>
+            </div>
+            <div class="form-group">
+                <label for="localidade">Localidade</label>
+                <input type="text" class="form-control" id ="localidade">
+                <small>Cidade</small>
+            </div>
+            <div class="form-group">
+                <label for="uf">UF</label>
+                <input type="text" class="form-control" id="uf">
+                <small>Estado</small>
+            </div>
+
+        </form>
+    </div>
+        <script src="../fech-api/src/js/main.js"></script>
+</body>
+</html>

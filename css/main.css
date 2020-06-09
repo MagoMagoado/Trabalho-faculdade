@@ -1,0 +1,154 @@
+/*o root é uma forma de criar variaeis que podem ser usada por toda a aplicação*/
+
+:root{
+    --primary-color: #282c34;
+    --secondary-color: #61dafb;
+    --back-color: #b4ebf8;
+}
+body{
+    width: 100%; /*largura do box em forma de porcentagem ou seja vai ser dinamica na tela*/
+    height: 100%;
+    margin: 0 auto!important; /*serve para tirar as bordas desnecessarias da pag, muito importante pois sem isso
+    a estilização da pag fica com uma barra em baixo, por conta dos adrões dos browsers*/
+
+    /*OUTRA FORMA DE NORMALIZAR É USANDO O normalize.css*/
+    background-color: var(--secondary-color)
+}
+
+ul{
+    /*o navegador já tem algumas formatações por padrão, então algumas definições 
+    globais que sobescreve a formatação do navegador é necessaria, pra funcionar corretamente*/
+    padding: 0px!important;  /* o important sobescreve o navegador*/
+}
+
+a{
+    text-decoration: none;
+    color: #131718;
+    
+}
+
+main{
+    width: 980px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/*estilização do menu de principal*/
+
+.menu-principal{
+    width: 100%; /*definindo o espaço de da ocupação da largura do menu*/
+    height: 60px; /*definindo a altutura da barra preta do background*/
+    background-color: var(--primary-color);
+}
+
+.logo{
+    padding: 8px;
+    width: 40%;
+    margin-top: 3px;
+    float: left; /*isso faz com que mude a direção dos parametros pleftleftara a esquerda*/
+}
+
+.redes-sociais ul li{
+    display: inline-block; /*isso tira as linhas de marcação padrões do html pro ul e li*/
+    margin-left: 15px;
+    list-style: none;
+    float: left;
+    
+}
+
+.redes-sociais{
+    width: 25%; /* é necessario pois sem a largura ideal fica um a baixo do outro*/
+    float: right;
+    
+    
+}
+
+/* FORMATAÇÃO DA HEADER DE BAIXO*/
+.header-2{
+    width: 980px;
+    margin: 0 auto;
+}
+
+.menu-separadores{
+    margin: 0 auto;
+    height: 10px; /*autura do menu, influencia diretamente na borda*/
+    padding: 1px;
+}
+
+.menu ul li{
+    display: inline-block;
+    margin-left: 2%;
+    transition: 400ms;
+
+}
+
+.menu{
+    font-size: 20px;
+    width: 70%;
+    float: left;
+    font-family: 'Fredoka One', cursive;
+    text-transform: uppercase;
+    transition: 700ms;
+}
+
+.busca{
+    text-align: center;
+    width: 30%;
+    float: right;
+    
+}
+
+.busca input{
+    margin-top: 12px;
+    height: 20px;
+    padding: 10px;
+    width:  209px;
+
+    /*adicionando imgs no background de um input*/
+    background-image: url(../img/search-24px.svg);
+    background-repeat: no-repeat; /*serve para a img não se repetir mais de uma vez*/
+    background-position: 100%; 
+    border: 1px solid var(--primary-color);
+    
+}
+.coluna-header-2{
+    width: 70%;
+    margin-left: 10%;
+    float: left;
+    position: relative;
+    padding: 30px;
+    padding-bottom: 20%;
+}
+
+.coluna-header-2 .header-2 .menu ul li :hover{
+    transition: 700ms;
+    background-color: #66767a;
+    color: white;
+    border-radius: 8px;
+    font-size: 30px;
+
+}
+
+/*estilizando os botões do slider*/
+button.slick-prev{
+    display: inline-block;
+    font-size: 0px;
+    border: none;
+    height: 36px;
+    width: 36px;
+    background-color: transparent;
+    position: absolute; /*para poder mexer no botão no mesmo lugar de uma imagem*/
+    z-index: 9; /*isso é como um sistma de camdas faz com que possa sobressair uma img ou ficar atrás de uma img*/
+    background-image: url("../img/previl-max.png");
+}
+button.slick-next{
+
+}
+button.slick-slide-control00{
+
+}
+.show-slider{
+    margin-top: 8%;
+    padding: 1px;
+}
+
