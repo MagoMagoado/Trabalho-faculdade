@@ -1,19 +1,44 @@
 /*o root é uma forma de criar variaeis que podem ser usada por toda a aplicação*/
 
 :root{
-    --primary-color: #282c34;
-    --secondary-color: #61dafb;
+    --primary-color: rgb(102, 97, 102);
+    --secondary-color: #282c34;
     --back-color: #b4ebf8;
 }
-body{
-    width: 100%; /*largura do box em forma de porcentagem ou seja vai ser dinamica na tela*/
-    height: 100%;
-    margin: 0 auto!important; /*serve para tirar as bordas desnecessarias da pag, muito importante pois sem isso
-    a estilização da pag fica com uma barra em baixo, por conta dos adrões dos browsers*/
-
-    /*OUTRA FORMA DE NORMALIZAR É USANDO O normalize.css*/
-    background-color: var(--secondary-color)
-}
+/*exxxxxxxxxxxxxx**/
+body {
+    background-color: var(--secondary-color);
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* deixando a coluna como um flex box */
+  .row {
+    display: flex;
+    float: left;
+    border-bottom: 100%;
+  }
+  .left {
+    flex: 35%;
+    padding: 15px 0;
+    background-color: rgb(69, 86, 88);
+    border-bottom: 100%;
+    margin-right: 10px;
+  }
+  /*distancia do menu*/
+  .left h2 {
+    padding-left: 10px;
+    color: rgb(50, 208, 248);
+  } 
+  .right {
+    flex: 65%;
+    padding: 15px;
+  }
+ 
 
 ul{
     /*o navegador já tem algumas formatações por padrão, então algumas definições 
@@ -23,15 +48,11 @@ ul{
 
 a{
     text-decoration: none;
-    color: #131718;
+    color: #6facbb;
     
 }
 
-main{
-    width: 980px;
-    position: relative;
-    margin: 0 auto;
-}
+
 
 /*estilização do menu de principal*/
 
@@ -39,6 +60,7 @@ main{
     width: 100%; /*definindo o espaço de da ocupação da largura do menu*/
     height: 60px; /*definindo a altutura da barra preta do background*/
     background-color: var(--primary-color);
+   
 }
 
 .logo{
@@ -64,15 +86,12 @@ main{
 }
 
 /* FORMATAÇÃO DA HEADER DE BAIXO*/
-.header-2{
-    width: 980px;
-    margin: 0 auto;
-}
 
 .menu-separadores{
     margin: 0 auto;
     height: 10px; /*autura do menu, influencia diretamente na borda*/
     padding: 1px;
+    margin-bottom: 100%;
 }
 
 .menu ul li{
@@ -83,72 +102,67 @@ main{
 }
 
 .menu{
-    font-size: 20px;
-    width: 70%;
-    float: left;
-    font-family: 'Fredoka One', cursive;
-    text-transform: uppercase;
-    transition: 700ms;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 100%;
 }
 
-.busca{
-    text-align: center;
-    width: 30%;
-    float: right;
-    
-}
-
-.busca input{
-    margin-top: 12px;
-    height: 20px;
-    padding: 10px;
-    width:  209px;
-
-    /*adicionando imgs no background de um input*/
-    background-image: url(../img/search-24px.svg);
-    background-repeat: no-repeat; /*serve para a img não se repetir mais de uma vez*/
-    background-position: 100%; 
-    border: 1px solid var(--primary-color);
-    
-}
-.coluna-header-2{
-    width: 70%;
-    margin-left: 10%;
-    float: left;
-    position: relative;
-    padding: 30px;
-    padding-bottom: 20%;
-}
-
-.coluna-header-2 .header-2 .menu ul li :hover{
-    transition: 700ms;
-    background-color: #66767a;
+.menu li a{
+    padding: 12px;
+    text-decoration: none;
     color: white;
-    border-radius: 8px;
-    font-size: 30px;
-
+    display: block;
+}
+.menu li a:hover{
+    background-color: bisque;
 }
 
-/*estilizando os botões do slider*/
-button.slick-prev{
-    display: inline-block;
-    font-size: 0px;
-    border: none;
-    height: 36px;
-    width: 36px;
-    background-color: transparent;
-    position: absolute; /*para poder mexer no botão no mesmo lugar de uma imagem*/
-    z-index: 9; /*isso é como um sistma de camdas faz com que possa sobressair uma img ou ficar atrás de uma img*/
-    background-image: url("../img/previl-max.png");
+/*formatando o pesquisador do menu*/
+#busca{
+    width: 100%;
+    font-size: 18px;
+    padding: 11px;
+    border: 1px solid #ddd;
+    
 }
-button.slick-next{
 
-}
-button.slick-slide-control00{
+/*TEXTO DA PAGINA PRINCIPAL*/
 
-}
-.show-slider{
-    margin-top: 8%;
+.text-body{
     padding: 1px;
+    text-align: justify;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.562);
+    margin-bottom: 10px;
+    border-radius: 60px 2px;
+}
+.text-body h1{
+    background-color: crimson;
+    text-align: center;
+    border-radius: 30px 7px;
 }
 
+
+.text-baixo{
+    color: azure;
+    font-family: 'Times New Roman';
+    font-size: 18px ;
+}
+.text-baixo button{
+    
+    background-color: crimson;
+    font-size: 20px;
+    font-family: Arial;
+}
+
+a{
+    text-decoration: none;
+}
+
+.banner{
+    margin-top: 20px;
+    padding: 2px;
+    background-color: rgb(6, 177, 230);
+    width: 1010px;
+}

@@ -1,0 +1,31 @@
+body{
+    margin: 0 auto;
+    color: palevioletred;
+}
+
+.top-header{
+    padding: 20px;
+    background-color: #f5d2f5;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 30px 100px;
+    border-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.servicos .serv{
+    padding: 30px;
+    border-radius: 107px 3px;
+    text-align: center;
+    background-color: #520d58;
+    display: flex;
+    display: inline-block;
+    border-bottom: 100%;
+    margin-bottom: 100px;
+    margin-left: 100px;
+}
+
+.servicos .serv:hover{
+    background-color: crimson;
+    padding: 50px;
+}

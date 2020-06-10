@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(219, 141, 39);
+
+}
+.header-top{
+    padding: 20px;
+    background-color: teal;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 150px 10px;
+}
+
+.envio-mensagem{
+
+}

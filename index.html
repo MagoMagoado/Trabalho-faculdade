@@ -19,51 +19,58 @@
                     
 
                 </div>
-            
-                <div class="redes-sociais">
-                    <ul>
-                        
-                        <li><a href="#"><img src="./img/twt.png"></a></li>
-                        <li><a href="#"><img src="./img/whatsapp.png"></a></li>
-                        <li><a href="#"><img src="./img/linkedin.png"></a></li>
-                        
-
-                    </ul> 
-                </div>
             </div>
         </main>
+        
+        <div class="redes-sociais">
+            <ul>
+                
+                <li><a href="#"><img src="./img/twt.png"></a></li>
+                <li><a href="#"><img src="./img/whatsapp.png"></a></li>
+                <li><a href="#"><img src="./img/linkedin.png"></a></li>
+                
+
+            </ul> 
+        </div>
     </header>
 
-    <main class="coluna-header-2 menu-separadores"> 
-        <div class="header-2">
-            <div class="menu">
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./pags/servico.html">Serviço</a></li>
-                    <li><a href="./pags/contato.html">Contato</a></li>
-                    <li><a href="./pags/formulario.html">Entrega</a></li>
-                    <li><a href="./pags/nos.html">Sobre nós</a></li>
-
+    <div class="row">
+        <div class="left">
+          <h2>Menu</h2>
+                <input id="busca" placeholder="Search..." type="text" onkeyup="searchFunc()"/>
+                <ul class="menu">
+                
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./pags/servico.html">Serviço</a></li>
+                        <li><a href="./pags/contato.html">Ouvidoria</a></li>
+                        <li><a href="./pags/formulario.html">Entrega</a></li>
+                        <li><a href="./pags/nos.html">Sobre nós</a></li>
+                        <li><a href="./pags/produtos.html"> Produtos</a></li>
+                        <li><a href="#"> Notícias </a></li>
+                        <li><a href="#">Rastrei seu produto</a></li>
+            
 
                 </ul>
-               
-            </div>  
-            <div class="busca"> 
-               <input placeholder="pesquise por medicamentos..." type="text" />
-            </div>
         </div>
-    </main>
-    <div class="show-slider"> 
-            <img src="./img/banner.jpg">
-            <img src="./img/banner.jpg">
-            <img src="./img/banner.jpg">
-
     </div>
-        <!-- Adicionando o javascript-->
-        <!--Adicionadno bibliotecas de terceiros para desenvolver o slide de imagens-->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+        <div class="text-body">
+            <h1>Drogaria Memorial do Estado de São Paulo<br></h1>
+            <h2>Nascemos da necessidade de pessoas que não podem sair de sua casa, para internet nesse<br></h2>
+            <h2> mundo cada vez mais globalizado.</h2>
+        </div>
+
+        <div class="text-baixo">
+            <p>
+                Acesse o portal para saber mais noticias sobre o covid-19.! E como se precaver Contra a doença.
+            </p>
+            <button><a href="https://coronavirus.saude.gov.br/">Precalções</a></button>
+            <button><a href="">Locais Mais afetados no Brasil</a></button>
+            <button><a href="">Acesse nosso twitter</a></button>
+        </div>
+
+        <img class = "banner" src = "./img/bannerFarm.jpg">
         <script type="text/javascript" src ="./js/main.js"></script>
+
 </body>
 </html>
