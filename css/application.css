@@ -1,0 +1,72 @@
+body {
+    width: 95%;
+    max-width: 950px;
+margin: auto;
+background-color: #282c34;
+background-size: cover;
+
+font-family: 'Lato';
+line-height: 1.5;
+color: white;
+}
+
+main {
+     background: #00000054;
+     border-radius: 5px;
+     padding: 80px 40px;
+     margin-bottom: 20px;
+
+}
+
+p {
+    text-align: justify;
+}
+
+/* Formatação de imagens com legendas */
+.logo, .headline {
+   margin: 0;
+   text-align: center; 
+}
+
+.menu {
+   height: 82px;
+}
+
+.menu ul {
+   margin: 10;
+   background: #595959;
+   border-radius: 5px;
+   list-style: none;
+   
+}
+
+.menu ul li {
+   display: inline;
+}
+
+.menu ul li a {
+   padding: 15px 80px;
+   display: inline-block;
+   color: white;
+   text-decoration: none;
+}
+
+.menu ul li a:hover {
+   transition: 15;
+   color: black;
+   background: rgba(255,255,255,0.7)
+}
+
+.Alunos {
+   margin: 30px 0;
+   text-align: center;
+   width:100%;
+}
+
+.Alunos table{
+   transition: 15;
+   background: #595959;
+   border-radius: 10px;
+   padding: 15px;
+   margin: 0 auto;
+}
