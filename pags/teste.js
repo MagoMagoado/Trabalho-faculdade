@@ -45,7 +45,7 @@ function remedios(){
     lista.forEach((e, i) => {
         document.getElementById('generator').innerHTML += "<style><style><tr><th>ID</th><th>REFERNCIA</th></tr> <br><br>"
        
-        document.getElementById('generator').insertAdjacentHTML += "<tr><th>", i + 1," ", e, "<th></tr>"
+        document.getElementById('generator').innerHTML += "<tr><th>", i + 1," ", e, "<th></tr>"
     })
    
 }

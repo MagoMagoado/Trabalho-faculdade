@@ -5,66 +5,97 @@
     <link rel="stylesheet" href="./css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> 
+
     <title>Memorial Drogaria</title>
 
 
 </head>
 <body>
-    
-    <header class="menu-principal">
-        <main>
-            <div class="top-header">
-                <div class="logo">
-                    <img src="./img/DMEsp menor.png">
-                    
-
-                </div>
-            </div>
-        </main>
-        
-        <div class="redes-sociais">
-            <ul>
-                
-                <li><a href="#"><img src="./img/twt.png"></a></li>
-                <li><a href="#"><img src="./img/whatsapp.png"></a></li>
-                <li><a href="#"><img src="./img/linkedin.png"></a></li>
-                
-
-            </ul> 
+    <header class="cabecalho">
+        <div class="logo">
+            <img src="./img/DMEsp menor.png">
         </div>
+         
+        <div class="redes-sociais">
+            <a href="#"><img src="./img/twt.png"></a>
+            <a href="#"><img src="./img/whatsapp.png"></a>
+            <a href="#"><img src="./img/linkedin.png"></a>
+        </div>
+          
+        
     </header>
 
-    <div class="row">
-        <div class="left">
-          <h2>Menu</h2>
-                <input id="busca" placeholder="Search..." type="text" onkeyup="searchFunc()"/>
-                <ul class="menu">
-                
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./pags/servico.html">Serviço</a></li>
-                        <li><a href="./pags/contato.html">Ouvidoria</a></li>
-                        <li><a href="./pags/formulario.html">Entrega</a></li>
-                        <li><a href="./pags/nos.html">Sobre nós</a></li>
-                        <li><a href="./pags/produtos.html"> Produtos</a></li>
-                        
-            
+    <header class="menu-principal">
+        <a href="./index.html">Home</a>
+        <a href="./pags/contato.html">Ouvidoria</a>
+        <a href="./pags/formulario.html">Entrega</a>
+        <a href="./pags/nos.html">Sobre nós</a>
+        <a href="./produtos/produtos.php"> Produtos</a>
+    </header>
 
-                </ul>
-        </div>
-    </div>
-
-        <div class="text-body">
+    <main class ="conteudo">
+        <div class="dados-iniciais">
             <h1>Drogaria Memorial do Estado de São Paulo<br></h1>
-            <h2>Nascemos da necessidade de pessoas que não podem sair de sua casa, para internet nesse<br></h2>
-            <h2> mundo cada vez mais globalizado.</h2>
-        </div>
-
-        <div class="text-baixo">
             
+
         </div>
 
-        <img class = "banner" src = "./img/bannerFarm.jpg">
-        <script type="text/javascript" src ="./js/main.js"></script>
+        <!--Apresentação dos slider-->
+        <div class="apresentacao-slide">
+            <div class="slide-show" style="max-width:1000px">
+                <img class="sliders" src="./img/o1banner.jpg" style="width:100%">
+                <img class="sliders" src="./img/02banner.jpg" style="width:100%">
+                <img class="sliders" src="./img/03banner.jpg" style="width:100%">
+            </div>
+          
+            <div class="buttons">
+                <div class="buttons-select">
+                    <button class="s-buttons entrada" onclick="botoes_F_T(1)">Next :❯</button>
+                    <button class="s-buttons entrada" onclick="botoes_F_T(-1)">❮: Prev</button>
+                </div>
+              
+            </div>
+            <div class="buttons2">
+                <button class="s-buttons saida" onclick="interadores(1)">1</button> 
+                <button class="s-buttons saida" onclick="interadores(2)">2</button> 
+                <button class="s-buttons saida" onclick="interadores(3)">3</button> 
+            </div>
+        </div>
+        
+        <script src="./slide.js"></script>
+    
+     </div>
 
-</body>
-</html>
+
+     <div class="titulo-produtos">
+         <h1>Medicamentos no estoque</h1>
+     </div>
+     <div class="produtos">
+         <div class="pro">
+            <img src="./img/p5.jpg">
+            <p><b>Xarelto</b> anticoagulante (usado para prevenir a formação de trombos sanguíneos, assim dificultando a circulação do sangue)<a href="https://pharma.bayer.com.br/html/bulas/profissionais_saude/Xarelto-15-20.pdf">Download Bula</a></p>
+         </div>
+       <div class="pro">
+            <img src="./img/p2.jpeg">
+            <p><b>SELOZOK</b> é indicado para tratamento da Hipertensão arterial (pressão alta)<br> - 
+                redução da pressão arterial, da morbidade e do risco de mortalidade de origem cardiovascular e coronária 
+                (incluindo morte súbita); Angina do peito; 
+                Adjuvante na terapia da insuficiência cardíaca crônica sintomática.... Entre outros. <a href="https://www.astrazeneca.com.br/content/dam/az-br/Medicine/medicine-pdf/Selozok_Bula_Paciente%20-%20SZK012.pdf">Download Bula</a></p>
+
+       </div>
+       <div class="pro">
+            <img src="./img/p3.jpeg"><p> O <b>Dorflex</b> é um remédio indicado para o alívio da dor associada a contraturas musculares, 
+                                        incluindo dor de cabeça tensional. Este medicamento tem na sua composição dipirona, orfenadrina, 
+                                         que exercem uma ação analgésica e relaxante muscular. <a href="https://www.dorflex.com.br/-/media/EMS/Conditions/Rheumatoid%20Arthritis/Brands/Dorflex-Brazil/produtos/pdf/Dorflex-3-Blisters-36-comprimidos-PDF.pdf?la=pt-BR">Download Bula</a></p>
+
+       </div>
+
+
+     </div>
+        
+    </main> 
+    
+        
+    
+</body> 
+</html> 

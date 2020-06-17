@@ -1,250 +1,182 @@
-/*o root é uma forma de criar variaeis que podem ser usada por toda a aplicação*/
-
 :root{
-    --primary-color: rgb(102, 97, 102);
-    --secondary-color: #282c34;
-    --back-color: #b4ebf8;
+    --primary: rgb(102, 97, 102);
+    --secondary: #282c34;
 }
-/*exxxxxxxxxxxxxx**/
+
 body {
-    background-color: var(--secondary-color);
-    margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
-    color: aliceblue;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  /* deixando a coluna como um flex box */
-  .row {
+    height: 100vh;
+    margin: 0px;
+
+    /*Declaração do tipo de formatação grid, flex, inline*/
+    /*esse exemplo do grid define linhas na tela onde vai ser trabalhada a formatação*/
+    display: grid;
+
+    /*Definição da quantidade de linhas e a definição de como elas serão apresentadas na tela
+                       l1   l2   l3  -> essa é adefinição da apresentação da quantidade de linhas na tela*/     
+    grid-template-rows: 60px 1fr;/*o px define um tamanho fixo, o fr é um fragmento*/
+    /*dessa forma o fr irá ocupar todo o resto que sobrar da tela*/
+    grid-template-columns: 1fr 8fr;
+   
+
+
+}
+ a{
+    text-decoration: none;   
+}
+.cabecalho{
+    background-color: var(--secondary);
+     /*Mas pode mudar a forma de visualização do flex-direction... como column*/
     display: flex;
-    float: left;
-    border-bottom: 100%;
-  }
-  .left {
-    flex: 35%;
-    padding: 15px 0;
-    background-color: rgb(69, 86, 88);
-    border-bottom: 100%;
-    margin-right: 10px;
-  }
-  /*distancia do menu*/
-  .left h2 {
-    padding-left: 10px;
-    color: rgb(50, 208, 248);
-  } 
-  .right {
-    flex: 65%;
-    padding: 15px;
-  }
- 
-
-ul{
-    /*o navegador já tem algumas formatações por padrão, então algumas definições 
-    globais que sobescreve a formatação do navegador é necessaria, pra funcionar corretamente*/
-    padding: 0px!important;  /* o important sobescreve o navegador*/
-}
-
-a{
-    text-decoration: none;
-    color: #6facbb;
-    
-}
-
-
-
-/*estilização do menu de principal*/
-
-.menu-principal{
-    width: 100%; /*definindo o espaço de da ocupação da largura do menu*/
-    height: 55px; /*definindo a altutura da barra preta do background*/
-    background-color: var(--primary-color);
+    flex-direction: row; /*MUDANDO A DIREÇÃO DOS COMPONENTS para linha*/
+    justify-content: space-between; /*MANIPULANDO A APRESENTAÇÃO DOS COMPONENTES NA TELA*/
+    z-index: 1; /*Coloca o cabeçalho a cima dos outros recursos*/
+    height: 60px;
+    /*Isso está delimitando a área de atuação na grid*/
+    grid-column-start: 1;
+    grid-column-end: 3;
+    align-items: center;
    
 }
 
-.logo{
-    padding: 8px;
-    width: 30%;
-    margin-top: 3px;
-    float: left; /*isso faz com que mude a direção dos parametros pleftleftara a esquerda*/
+.cabecalho .logo, .redes-sociais{
+     margin: 10px;
 }
 
-.redes-sociais ul li{
-    display: inline-block; /*isso tira as linhas de marcação padrões do html pro ul e li*/
-    margin-left: 15px;
-    list-style: none;
-    float: left;
+.menu-principal{
+    background-color: var(--primary);
+    height: 100%;
+    grid-column-start: 1;
+    grid-column-end: 1;
     
 }
-
-.redes-sociais{
-    width: 25%; /* é necessario pois sem a largura ideal fica um a baixo do outro*/
-    float: right;
-    
-    
-}
-
-/* FORMATAÇÃO DA HEADER DE BAIXO*/
-
-.menu-separadores{
-    margin: 0 auto;
-    height: 10px; /*autura do menu, influencia diretamente na borda*/
-    padding: 1px;
-    margin-bottom: 100%;
-}
-
-.menu ul li{
-    display: inline-block;
-    margin-left: 2%;
-    transition: 400ms;
-
-}
-
-.menu{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 100%;
-}
-
-.menu li a{
-    padding: 12px;
-    text-decoration: none;
-    color: white;
-    display: block;
-}
-.menu li a:hover{
-    background-color: bisque;
-}
-
-/*formatando o pesquisador do menu*/
-#busca{
-    width: 100%;
-    font-size: 18px;
-    padding: 11px;
-    border: 1px solid #ddd;
-    
-}
-
-/*TEXTO DA PAGINA PRINCIPAL*/
-
-.text-body{
-    padding: 1px;
-    text-align: justify;
-    color: white;
-    background-color: rgba(255, 255, 255, 0.562);
-    margin-bottom: 9px;
-    border-radius: 60px 2px;
-}
-.text-body h1{
-    background-color: crimson;
-    text-align: center;
-    border-radius: 30px 7px;
-    font-size: 25px;
-}
-.text-body h2{
-    font-size: 20px;
-}
-
-.text-baixo{
-    color: azure;
-    font-family: 'Times New Roman';
-    font-size: 20px ;
-}
-.text-baixo button{
-    
-    background-color: crimson;
-    font-size: 20px;
-    font-family: Arial;
-}
-
-a{
-    text-decoration: none;
-}
-
-.banner{
-    margin-top: 20px;
-    padding: 2px;
-    background-color: rgb(6, 177, 230);
-    width: 1010px;
-}
-
-/*ESTILIZAÇÃO DA PAGINA DE PRODUTOS*/
-#box-principal{
-    background-color: rgb(90, 89, 90);
+.menu-principal a{
     display: flex;
-    width: 100%;
-    float: left;
-    height: 110px;
-    padding: 100 px;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-#box-principal button{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    font-size: 20px;
-    font-family: Arial;
     padding: 20px;
+    flex-direction: column;
+    align-items: center; 
+    font-weight: 500;
+    font-size: 30px;
     color: white;
-    border-color: purple;
-    border-radius: 20px 9px;
-    background-color: rgba(131, 128, 128, 0.829);
     transition: 400ms;
-}
 
-#box-principal button:hover{
-    background-color: bisque;
-    padding: 25px;
-    margin-bottom: 15px;
-
-    font-size: 100%;
 }
-#genericos{
-    color: aliceblue;
+.menu-principal a:hover {
+    background-color: black;
 }
-#normais{
-    color: aliceblue;
-}
-#higiene{
-    color: aliceblue;
-}
-#covid-itens{
-    color: aliceblue;
-}
-
-#consultas{
-    color: aliceblue;
+.conteudo{
+    background-color: #f0f0f0f0; 
+    grid-column-start: 2;
+    grid-column-end: 3;
+    /*Serve para se ficar maior que o tamanho permitido ele coloca um scroll do lado*/
+    padding: 18px;
+    z-index: 1;
+    margin-top: 0px;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.2);
 
 }
 
-.botao_boxs {
-    background-color: #555;
+.conteudo .dados-iniciais h1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: red;
+  border-radius: 10px 20px;
+  color: white;
+  margin-left: 30px;
+
+}
+main {
+    max-width: 1150px;
+}
+main .slide{
+    margin-bottom: 80px;
+    border-bottom: 2px solid black;
+}
+main .slide .slide-principal > img{
+    width: 800px;
+    margin: 0 auto;
+    
+    
+}
+
+main .produtos{
+    display: flex;
+    margin: 5px;
+    padding: 2px;
+    overflow-x: scroll;
+    flex-direction: row;
+    border: 3px solid black;
+    border-radius: 50px;
+    background-color: crimson;
+}
+
+
+main .produtos > .pro > img{
+   
+    border-bottom: 2px solid black;
+    margin-bottom: 2px;
+}
+
+main .produtos > .pro {
+    background-color: white;
+    margin: 30px 30px 30px;
+    padding: 30px 30px 30px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+main .produtos > .pro > p{
+    text-align: justify;
+}
+main .produtos > .pro > p > a{
+    background-color: rgb(216, 122, 122);
+    color: aliceblue;
+    padding: 2px;
+    border-radius: 15px;
+}
+.apresentacao-slide .slide-show > img{
+    padding: 28px;
+    margin-left: 4%;
+}
+.apresentacao-slide{
+    margin-bottom: 100px;
+}
+.buttons button{
+    background-color: crimson;
+    padding: 9px;
+    border: 1px solid;
+    border-radius: 20px 12px;
     color: white;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    font-size: 17px;
-    width: 25%;
-  }
-  
-
-
-/** TABELAS DOS PRODUTOS ***/
-
-body  td, body th{
-    border: 1px solid #ddd;
-    padding: 8px;
+    font-size: 20px;
 }
-th {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        text-align: left;
-        background-color: #4CAF50;
-        color: white;
-      }
+
+.buttons .buttons-select button{
+    margin-left: 20%;
+    margin-right: 20%;
+   
+  
+}
+
+.buttons2 > button{
+    background-color: crimson;
+    padding: 9px;
+    border: 1px solid;
+    border-radius: 20px 12px;
+    color: white;
+    font-size: 20px;
+}
+
+.buttons2{
+    margin-left: 42%;
+}
+
+
+.titulo-produtos {
+    background-color: crimson;
+    padding: 1px;
+    margin: 1px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 220px 200px;
+    border: 1px solid black;
+}
