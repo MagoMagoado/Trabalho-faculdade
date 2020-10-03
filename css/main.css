@@ -2,28 +2,26 @@
     --primary: rgb(102, 97, 102);
     --secondary: #282c34;
 }
+html,body{
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
 
 body {
-    height: 100vh;
-    margin: 0px;
-
-    /*Declaração do tipo de formatação grid, flex, inline*/
-    /*esse exemplo do grid define linhas na tela onde vai ser trabalhada a formatação*/
     display: grid;
-
-    /*Definição da quantidade de linhas e a definição de como elas serão apresentadas na tela
-                       l1   l2   l3  -> essa é adefinição da apresentação da quantidade de linhas na tela*/     
-    grid-template-rows: 60px 1fr;/*o px define um tamanho fixo, o fr é um fragmento*/
-    /*dessa forma o fr irá ocupar todo o resto que sobrar da tela*/
-    grid-template-columns: 1fr 8fr;
-   
-
-
+    grid-template-rows: 60px auto;
+    grid-template-columns: 20vw auto;
+   grid-template-areas: 'nav nav'
+                        'lateral conteudo';
 }
  a{
     text-decoration: none;   
 }
 .cabecalho{
+    grid-area: nav;
     background-color: var(--secondary);
      /*Mas pode mudar a forma de visualização do flex-direction... como column*/
     display: flex;
@@ -32,8 +30,6 @@ body {
     z-index: 1; /*Coloca o cabeçalho a cima dos outros recursos*/
     height: 60px;
     /*Isso está delimitando a área de atuação na grid*/
-    grid-column-start: 1;
-    grid-column-end: 3;
     align-items: center;
    
 }
@@ -43,10 +39,9 @@ body {
 }
 
 .menu-principal{
+    grid-area: lateral;
     background-color: var(--primary);
     height: 100%;
-    grid-column-start: 1;
-    grid-column-end: 1;
     
 }
 .menu-principal a{
@@ -64,13 +59,15 @@ body {
     background-color: black;
 }
 .conteudo{
-    background-color: #f0f0f0f0; 
-    grid-column-start: 2;
-    grid-column-end: 3;
-    /*Serve para se ficar maior que o tamanho permitido ele coloca um scroll do lado*/
-    padding: 18px;
+    grid-area: conteudo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1150px;
+    background-color: #f0f0f0f0;
     z-index: 1;
-    margin-top: 0px;
+    margin: 0px !important;
     box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.2);
 
 }
@@ -79,15 +76,12 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: red;
+  background-color: rgb(240, 4, 4);
   border-radius: 10px 20px;
+  padding: .5rem 3rem;
   color: white;
-  margin-left: 30px;
+}
 
-}
-main {
-    max-width: 1150px;
-}
 main .slide{
     margin-bottom: 80px;
     border-bottom: 2px solid black;
@@ -95,13 +89,11 @@ main .slide{
 main .slide .slide-principal > img{
     width: 800px;
     margin: 0 auto;
-    
-    
 }
-
 main .produtos{
+    width: 95%;
     display: flex;
-    margin: 5px;
+    margin: 5px 0px;
     padding: 2px;
     overflow-x: scroll;
     flex-direction: row;
@@ -110,19 +102,22 @@ main .produtos{
     background-color: crimson;
 }
 
-
-main .produtos > .pro > img{
-   
-    border-bottom: 2px solid black;
-    margin-bottom: 2px;
-}
-
 main .produtos > .pro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     background-color: white;
-    margin: 30px 30px 30px;
-    padding: 30px 30px 30px;
+    margin: 10px 5px;
+    padding: 2%;
     border: 2px solid black;
     border-radius: 20px;
+}
+
+main .produtos > .pro > img{
+    width: 200px; height: 45%;
+    border-bottom: 2px solid black;
+    margin-bottom: 2px;
 }
 
 main .produtos > .pro > p{
@@ -135,11 +130,13 @@ main .produtos > .pro > p > a{
     border-radius: 15px;
 }
 .apresentacao-slide .slide-show > img{
-    padding: 28px;
-    margin-left: 4%;
+    width: 93%;
+    margin-left: auto; margin-right: auto;
+    max-width:1000px;
+    padding: 28px 0px;
 }
 .apresentacao-slide{
-    margin-bottom: 100px;
+    margin-bottom: 3rem;
 }
 .buttons button{
     background-color: crimson;
@@ -149,12 +146,9 @@ main .produtos > .pro > p > a{
     color: white;
     font-size: 20px;
 }
-
-.buttons .buttons-select button{
-    margin-left: 20%;
-    margin-right: 20%;
-   
-  
+.buttons .buttons-select{
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .buttons2 > button{
@@ -172,11 +166,11 @@ main .produtos > .pro > p > a{
 
 
 .titulo-produtos {
+    width: 95%;
     background-color: crimson;
-    padding: 1px;
     margin: 1px;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     border-radius: 220px 200px;
     border: 1px solid black;
 }
